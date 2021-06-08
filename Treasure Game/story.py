@@ -24,19 +24,24 @@ print("Welcome to Treasure Island. \n")
 print("Your mission is to find the treasure. \n")
 
 g_o = "\nGame Over.\n"
-direction = input("Where do yo wanna go? Left or Rigth?:\n")
+direction = input('You\'re in a crossroad, where do yo wanna go? Left or Rigth?:\n')
 
-if direction.lower() == "rigth":
-    print(g_o)
-else:
+if direction.lower() == "left":
+
     print("\nOh no, there's a river in front of you! You can swim across or wait for a boat.")
     direction = input("What do you do? Swim or Wait?:\n")
-    if direction.lower() == "swim":
-        print(g_o)
-    else:
+
+    if direction.lower() == "wait":
+
         print("\nYou cross the river Succesfully.\nNow you found 3 doors, there's yellow, red and blue each.")
         direction = input("Which door do you open? The Yellow, the Red or the Blue one?:\n")
-        if (direction.lower() == "red") or (direction.lower() == "blue"):
-            print(g_o)
-        else:
+        if direction.lower() == "yellow":
             print("\nCONGRATULATIONS!!!\nYou Win")
+        else:
+            print(g_o)
+
+    else:
+        print(g_o)
+
+else:
+    print(g_o)
